@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cashlin — AI & Data Portfolio</title>
+<title>Cashlin — AI/ML Engineer & Data Scientist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -237,6 +237,23 @@
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 2rem;
+    max-height: 520px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  .skills-block::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .skills-block::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .skills-block::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 2px;
   }
 
   .skills-block h3 {
@@ -574,13 +591,13 @@
 
 <div class="hero">
   <div class="hero-bg-text" aria-hidden="true">AI</div>
-  <p class="hero-label">// Portfolio</p>
+  <p class="hero-label">// AI/ML Engineer · Data Scientist</p>
   <h1>
     Hi, I'm<br>
     <em>Cashlin</em>
   </h1>
   <p class="hero-sub">
-    I build intelligent AI systems that solve real-world problems, and I translate messy data into valuable insights.
+    AI/ML Engineer &amp; Data Scientist — building intelligent systems, designing GenAI pipelines, and turning complex data into actionable insight.
   </p>
   <div class="hero-actions">
     <a href="#projects" class="btn btn-primary">View my work</a>
@@ -598,38 +615,52 @@
   <div class="about-grid">
     <div class="about-text">
       <p>
-        I'm <strong>Cashlin</strong>, an AI developer and data enthusiast passionate about building systems that think, learn, and solve real problems. I work at the intersection of machine learning, natural language processing, and data engineering.
+        I'm <strong>Cashlin</strong>, an <strong>AI/ML Engineer</strong> and <strong>Data Scientist</strong> passionate about building systems that think, learn, and solve real problems. I specialise in designing end-to-end machine learning pipelines, fine-tuning large language models, and deploying production-ready AI applications.
       </p>
       <p>
-        From designing retrieval-augmented generation pipelines to training transformer-based classifiers, I love taking complex problems and turning them into clean, working solutions.
+        From architecting retrieval-augmented generation systems and multi-agent LLM workflows to training transformer-based classifiers and building data-driven dashboards, I thrive at turning complexity into clean, working solutions.
       </p>
       <p>
-        Currently open to collaborations, research opportunities, and interesting AI/ML projects.
+        Currently open to collaborations, research opportunities, and exciting AI/ML and Data Science projects.
       </p>
     </div>
     <div class="skills-block">
-      <h3>Tech I work with</h3>
+      <h3>Programming Languages</h3>
       <div class="skill-tags">
+        <span class="tag">C</span>
         <span class="tag">Python</span>
-        <span class="tag">Machine Learning</span>
-        <span class="tag">NLP</span>
-        <span class="tag">BERT</span>
-        <span class="tag">LangChain</span>
-        <span class="tag">RAG</span>
-        <span class="tag">Transformers</span>
-        <span class="tag">Pandas</span>
-        <span class="tag">Scikit-learn</span>
-        <span class="tag">TensorFlow</span>
-        <span class="tag">PyTorch</span>
-        <span class="tag">Git</span>
+        <span class="tag">SQL</span>
+        <span class="tag">R Programming</span>
+        <span class="tag">Lua</span>
       </div>
-      <h3 style="margin-top: 1.5rem;">Tools & Platforms</h3>
+      <h3 style="margin-top: 1.5rem;">GenAI &amp; LLMs</h3>
+      <div class="skill-tags">
+        <span class="tag">LangChain</span>
+        <span class="tag">OpenAI API</span>
+        <span class="tag">Hugging Face</span>
+        <span class="tag">RAG Pipelines</span>
+        <span class="tag">Ollama</span>
+        <span class="tag">Prompt Engineering</span>
+        <span class="tag">VectorDB</span>
+      </div>
+      <h3 style="margin-top: 1.5rem;">DS/ML Frameworks</h3>
+      <div class="skill-tags">
+        <span class="tag">Pandas</span>
+        <span class="tag">Numpy</span>
+        <span class="tag">PySpark</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">Scikit-learn</span>
+        <span class="tag">NLTK</span>
+        <span class="tag">SpaCy</span>
+        <span class="tag">OpenCV</span>
+      </div>
+      <h3 style="margin-top: 1.5rem;">Tools &amp; Platforms</h3>
       <div class="skill-tags">
         <span class="tag">GitHub</span>
-        <span class="tag">Jupyter</span>
         <span class="tag">HuggingFace</span>
         <span class="tag">VS Code</span>
-        <span class="tag">Streamlit</span>
+        <span class="tag">MS Excel</span>
       </div>
     </div>
   </div>
@@ -644,7 +675,7 @@
   <div class="projects-grid">
 
     <!-- FEATURED -->
-    <a href="https://github.com/Cashlin3" target="_blank" class="project-card featured">
+    <a href="https://github.com/Cashlin3/IntelliRead-Personalized-Book-Discovery-Engine" target="_blank" class="project-card featured">
       <div class="project-content">
         <span class="badge-featured">Featured</span>
         <span class="project-num">01</span>
@@ -671,7 +702,7 @@
     </a>
 
     <!-- PROJECT 2 -->
-    <a href="https://github.com/Cashlin3" target="_blank" class="project-card">
+    <a href="https://github.com/Cashlin3/GoalForge-Intelligent-Goal-Recommendation-System" target="_blank" class="project-card">
       <span class="project-num">02</span>
       <h3>GoalForge — Intelligent Goal Recommendation System</h3>
       <p class="project-desc">
@@ -691,7 +722,7 @@
     </a>
 
     <!-- PROJECT 3 -->
-    <a href="https://github.com/Cashlin3" target="_blank" class="project-card">
+    <a href="https://github.com/Cashlin3/DocuMind--RAG-Powered-Knowledge-Assistant" target="_blank" class="project-card">
       <span class="project-num">03</span>
       <h3>DocuMind — RAG-Powered Knowledge Assistant</h3>
       <p class="project-desc">
@@ -735,7 +766,7 @@
     </a>
 
     <!-- PROJECT 5 -->
-    <a href="https://github.com/Cashlin3" target="_blank" class="project-card">
+    <a href="https://github.com/Cashlin3/TranscriptIQ-Youtube-Video-Transcript-Extractor" target="_blank" class="project-card">
       <span class="project-num">05</span>
       <h3>TranscriptIQ — YouTube Video Transcript Extractor</h3>
       <p class="project-desc">
