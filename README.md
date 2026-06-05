@@ -1,4 +1,4 @@
-# Cashlin3 Portfolio
+# Cashlin Portfolio
 
 Personal portfolio website built with GitHub Pages to showcase my projects, skills, and experience.
 
