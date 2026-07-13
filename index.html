@@ -58,6 +58,7 @@
 
   .nav-links {
     display: flex;
+    align-items: center;
     gap: 2rem;
     list-style: none;
   }
@@ -161,8 +162,33 @@
     line-height: 1.6;
   }
 
+  .hero-achievement {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1.75rem;
+    padding: 0.6rem 1.1rem;
+    border: 1px solid rgba(200,245,90,0.25);
+    background: var(--accent-dim);
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    max-width: fit-content;
+  }
+
+  .hero-achievement svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--accent);
+    fill: none;
+    stroke-width: 2;
+    flex-shrink: 0;
+  }
+
   .hero-actions {
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
@@ -285,6 +311,71 @@
   .tag:hover {
     border-color: var(--accent);
     color: var(--accent);
+  }
+
+  /* Achievement banner */
+  .achievement-banner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .achievement-card {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    background: linear-gradient(135deg, var(--accent-dim), transparent);
+    border: 1px solid rgba(200,245,90,0.25);
+    border-radius: 10px;
+    padding: 2rem 2.25rem;
+  }
+
+  .achievement-icon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .achievement-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: #0d0d0d;
+    fill: none;
+    stroke-width: 2;
+  }
+
+  .achievement-text .achievement-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  .achievement-text h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+  }
+
+  .achievement-text p {
+    font-size: 14.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 640px;
+  }
+
+  .achievement-text p strong {
+    color: var(--text);
+    font-weight: 500;
   }
 
   .projects-full {
@@ -447,6 +538,32 @@
     margin-bottom: 0.5rem;
   }
 
+  .badge-award {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 3px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+  }
+
+  .badge-award svg {
+    width: 11px;
+    height: 11px;
+    stroke: var(--accent);
+    fill: none;
+    stroke-width: 2;
+  }
+
   .divider {
     height: 1px;
     background: var(--border);
@@ -564,12 +681,13 @@
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
-    .hero, section, .projects-full, .contact-section, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .hero, section, .projects-full, .contact-section, footer, .achievement-banner { padding-left: 1.5rem; padding-right: 1.5rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     .project-card.featured { flex-direction: column; }
     .project-card.featured .project-preview { width: 100%; }
     .contact-section { grid-template-columns: 1fr; }
     .hero-bg-text { font-size: 80px; }
+    .achievement-card { flex-direction: column; align-items: flex-start; gap: 1rem; }
   }
 </style>
 </head>
@@ -579,6 +697,7 @@
   <a href="#" class="nav-logo">cashlin.dev</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#achievements">Achievements</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
     <li>
@@ -599,6 +718,10 @@
   <p class="hero-sub">
     AI/ML Engineer &amp; Data Scientist — building intelligent systems, designing GenAI pipelines, and turning complex data into actionable insight.
   </p>
+  <div class="hero-achievement">
+    <svg viewBox="0 0 24 24"><path d="M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3a2 2 0 0 1-2 4M7 5H4a2 2 0 0 0 2 4"/></svg>
+    1st Place — ML Empowerment Build Challenge, Productivity Booster Track
+  </div>
   <div class="hero-actions">
     <a href="#projects" class="btn btn-primary">View my work</a>
     <a href="https://github.com/Cashlin3" target="_blank" class="btn btn-ghost">GitHub profile ↗</a>
@@ -637,8 +760,11 @@
       <div class="skill-tags">
         <span class="tag">LangChain</span>
         <span class="tag">OpenAI API</span>
+        <span class="tag">Claude API</span>
+        <span class="tag">Gemini API</span>
         <span class="tag">Hugging Face</span>
         <span class="tag">RAG Pipelines</span>
+        <span class="tag">ChromaDB</span>
         <span class="tag">Ollama</span>
         <span class="tag">Prompt Engineering</span>
         <span class="tag">VectorDB</span>
@@ -654,6 +780,7 @@
         <span class="tag">NLTK</span>
         <span class="tag">SpaCy</span>
         <span class="tag">OpenCV</span>
+        <span class="tag">Streamlit</span>
       </div>
       <h3 style="margin-top: 1.5rem;">Tools &amp; Platforms</h3>
       <div class="skill-tags">
@@ -668,8 +795,27 @@
 
 <div class="divider"></div>
 
+<section id="achievements">
+  <p class="section-label">// 02 — Achievements</p>
+  <h2 class="section-title">Recognition</h2>
+  <div class="achievement-card">
+    <div class="achievement-icon">
+      <svg viewBox="0 0 24 24"><path d="M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3a2 2 0 0 1-2 4M7 5H4a2 2 0 0 0 2 4"/></svg>
+    </div>
+    <div class="achievement-text">
+      <p class="achievement-tag">Hackathon Win</p>
+      <h3>1st Place — Productivity Booster Track, ML Empowerment Build Challenge</h3>
+      <p>
+        Won for <strong>LocalPulse AI</strong>, an automated local-business review classification system that reached <strong>86% accuracy</strong> across 700,000+ Yelp records using PySpark and Scikit-learn.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <div class="projects-full" id="projects">
-  <p class="section-label">// 02 — Projects</p>
+  <p class="section-label">// 03 — Projects</p>
   <h2 class="section-title">Things I've built</h2>
 
   <div class="projects-grid">
@@ -681,13 +827,13 @@
         <span class="project-num">01</span>
         <h3>IntelliRead — Personalized Book Discovery Engine</h3>
         <p class="project-desc">
-          An AI-powered recommendation engine that learns your reading preferences and suggests books tailored to your taste. Uses collaborative filtering and content-based algorithms to match readers with books they'll love, going beyond simple genre matching to understand nuanced preferences.
+          An AI-powered recommendation engine that learns your reading preferences and suggests books tailored to your taste. Processed 10,000+ Goodreads records to train a collaborative-filtering model, delivering top-5 personalized recommendations in under 2 seconds.
         </p>
         <div class="project-tech">
           <span class="tech-pill">Python</span>
           <span class="tech-pill">Scikit-learn</span>
           <span class="tech-pill">Pandas</span>
-          <span class="tech-pill">NLP</span>
+          <span class="tech-pill">Streamlit</span>
         </div>
         <div class="project-links">
           <span class="project-link">
@@ -697,13 +843,81 @@
         </div>
       </div>
       <div class="project-preview" aria-hidden="true">
-        Recommendation Engine · NLP · Collaborative Filtering
+        Recommendation Engine · Collaborative Filtering
       </div>
     </a>
 
-    <!-- PROJECT 2 -->
-    <a href="https://github.com/Cashlin3/GoalForge-Intelligent-Goal-Recommendation-System" target="_blank" class="project-card">
+    <!-- PROJECT 2: LocalPulse AI (award-winning) -->
+    <a href="https://github.com/Cashlin3/LocalPulse-AI-Automated-Local-Business-Review-Classification-System" target="_blank" class="project-card">
+      <span class="badge-award">
+        <svg viewBox="0 0 24 24"><path d="M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3a2 2 0 0 1-2 4M7 5H4a2 2 0 0 0 2 4"/></svg>
+        1st Place Winner
+      </span>
       <span class="project-num">02</span>
+      <h3>LocalPulse AI — Automated Local Business Review Classification System</h3>
+      <p class="project-desc">
+        A scalable ML text-classification pipeline processing 700,000+ Yelp reviews with PySpark and Scikit-learn, reaching 86% classification accuracy. Engineered NLP-based feature extraction to power faster, more reliable review-driven business decisions. Won 1st Place in the Productivity Booster track at the ML Empowerment Build Challenge.
+      </p>
+      <div class="project-tech">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">PySpark</span>
+        <span class="tech-pill">Scikit-learn</span>
+        <span class="tech-pill">NLP</span>
+      </div>
+      <div class="project-links">
+        <span class="project-link">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </span>
+      </div>
+    </a>
+
+    <!-- PROJECT 3 -->
+    <a href="https://github.com/Cashlin3/DocuMind--RAG-Powered-Knowledge-Assistant" target="_blank" class="project-card">
+      <span class="project-num">03</span>
+      <h3>DocuMind — RAG-Powered Knowledge Assistant</h3>
+      <p class="project-desc">
+        A Retrieval-Augmented Generation application that lets you chat with your own documents. Built an end-to-end LangChain-orchestrated ingestion pipeline with 500-token semantic chunking, cutting query response time to under 3 seconds. Deployed publicly on Streamlit Cloud.
+      </p>
+      <div class="project-tech">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">LangChain</span>
+        <span class="tech-pill">ChromaDB</span>
+        <span class="tech-pill">RAG</span>
+        <span class="tech-pill">Streamlit</span>
+      </div>
+      <div class="project-links">
+        <span class="project-link">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </span>
+      </div>
+    </a>
+
+    <!-- PROJECT 4 -->
+    <a href="https://factuality-bert-based-fake-news-classification.streamlit.app/" target="_blank" class="project-card">
+      <span class="project-num">04</span>
+      <h3>Factuality — Fake News Detection System</h3>
+      <p class="project-desc">
+        A fine-tuned DistilBERT transformer classification model trained on labelled news data with a custom NLP preprocessing workflow, reaching 92% classification accuracy. Deployed live on Streamlit Cloud as a production-grade fake-news classifier.
+      </p>
+      <div class="project-tech">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">DistilBERT</span>
+        <span class="tech-pill">HuggingFace</span>
+        <span class="tech-pill">Streamlit</span>
+      </div>
+      <div class="project-links">
+        <span class="project-link">
+          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Live Demo
+        </span>
+      </div>
+    </a>
+
+    <!-- PROJECT 5 -->
+    <a href="https://github.com/Cashlin3/GoalForge-Intelligent-Goal-Recommendation-System" target="_blank" class="project-card">
+      <span class="project-num">05</span>
       <h3>GoalForge — Intelligent Goal Recommendation System</h3>
       <p class="project-desc">
         An AI system that takes your ambitions as input and generates a structured, actionable roadmap to achieve them. Analyses user inputs to suggest relevant goals, milestones, and resources — making personal and professional growth more systematic.
@@ -721,53 +935,9 @@
       </div>
     </a>
 
-    <!-- PROJECT 3 -->
-    <a href="https://github.com/Cashlin3/DocuMind--RAG-Powered-Knowledge-Assistant" target="_blank" class="project-card">
-      <span class="project-num">03</span>
-      <h3>DocuMind — RAG-Powered Knowledge Assistant</h3>
-      <p class="project-desc">
-        A Retrieval-Augmented Generation application that lets you chat with your own documents. Upload PDFs or text files and ask questions in plain English — DocuMind retrieves the most relevant context and generates precise, grounded answers using a large language model.
-      </p>
-      <div class="project-tech">
-        <span class="tech-pill">Python</span>
-        <span class="tech-pill">LangChain</span>
-        <span class="tech-pill">RAG</span>
-        <span class="tech-pill">LLM</span>
-        <span class="tech-pill">Vector DB</span>
-      </div>
-      <div class="project-links">
-        <span class="project-link">
-          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          GitHub
-        </span>
-      </div>
-    </a>
-
-    <!-- PROJECT 4 -->
-    <a href="https://github.com/Cashlin3" target="_blank" class="project-card">
-      <span class="project-num">04</span>
-      <h3>TruthGuard — Fake News Detection with BERT</h3>
-      <p class="project-desc">
-        A transformer-based classification model that detects misinformation in news articles. Fine-tuned BERT on labelled news datasets to distinguish real from fake news with high accuracy — combating the spread of disinformation using state-of-the-art NLP.
-      </p>
-      <div class="project-tech">
-        <span class="tech-pill">Python</span>
-        <span class="tech-pill">BERT</span>
-        <span class="tech-pill">Transformers</span>
-        <span class="tech-pill">HuggingFace</span>
-        <span class="tech-pill">PyTorch</span>
-      </div>
-      <div class="project-links">
-        <span class="project-link">
-          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          GitHub
-        </span>
-      </div>
-    </a>
-
-    <!-- PROJECT 5 -->
+    <!-- PROJECT 6 -->
     <a href="https://github.com/Cashlin3/TranscriptIQ-Youtube-Video-Transcript-Extractor" target="_blank" class="project-card">
-      <span class="project-num">05</span>
+      <span class="project-num">06</span>
       <h3>TranscriptIQ — YouTube Video Transcript Extractor</h3>
       <p class="project-desc">
         A smart tool that instantly extracts and formats the full transcript of any YouTube video — just paste the URL. Ideal for researchers, students, and content creators who want to read, search, or repurpose video content without watching hours of footage.
@@ -793,18 +963,18 @@
 
 <div class="contact-section" id="contact">
   <div class="contact-left">
-    <p class="section-label">// 03 — Contact</p>
+    <p class="section-label">// 04 — Contact</p>
     <h2>Let's <em>work<br>together</em></h2>
     <p>Have an AI idea, a data problem, or just want to collaborate? I'm always open to interesting conversations.</p>
   </div>
   <div class="contact-links">
-    <a href="mailto:cashlinarts@gmail.com" class="contact-item">
+    <a href="mailto:imcashlin@gmail.com" class="contact-item">
       <div class="contact-icon">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </div>
       <div>
         <p class="contact-item-label">Email</p>
-        <p class="contact-item-value">cashlinarts@gmail.com</p>
+        <p class="contact-item-value">imcashlin@gmail.com</p>
       </div>
     </a>
     <a href="https://github.com/Cashlin3" target="_blank" class="contact-item">
