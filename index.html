@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cashlin — AI/ML Engineer & Data Scientist</title>
+<title>Cashlin — AI/ML Engineer & Gen AI Engineer</title>
+<meta name="description" content="Cashlin, AI/ML Engineer and Gen AI Engineer. Open to full-time roles in India or remote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -314,12 +315,6 @@
   }
 
   /* Achievement banner */
-  .achievement-banner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 3rem;
-  }
-
   .achievement-card {
     display: flex;
     align-items: center;
@@ -376,6 +371,40 @@
   .achievement-text p strong {
     color: var(--text);
     font-weight: 500;
+  }
+
+  /* Experience */
+  .exp-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem 2.25rem;
+  }
+
+  .exp-card h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+  }
+
+  .exp-meta {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    margin-bottom: 1.25rem;
+  }
+
+  .exp-card ul {
+    padding-left: 1.2rem;
+    color: rgba(240,237,230,0.75);
+    font-size: 15px;
+  }
+
+  .exp-card li {
+    margin-bottom: 0.6rem;
   }
 
   .projects-full {
@@ -522,20 +551,6 @@
     text-align: center;
     padding: 1rem;
     line-height: 1.5;
-  }
-
-  .badge-featured {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 3px;
-    background: var(--accent);
-    color: #0d0d0d;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
   }
 
   .badge-award {
@@ -694,10 +709,11 @@
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">cashlin.dev</a>
+  <a href="#" class="nav-logo">CASHLIN</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
     <li>
@@ -710,13 +726,13 @@
 
 <div class="hero">
   <div class="hero-bg-text" aria-hidden="true">AI</div>
-  <p class="hero-label">// AI/ML Engineer · Data Scientist</p>
+  <p class="hero-label">// AI/ML Engineer · Gen AI Engineer</p>
   <h1>
     Hi, I'm<br>
     <em>Cashlin</em>
   </h1>
   <p class="hero-sub">
-    AI/ML Engineer &amp; Data Scientist — building intelligent systems, designing GenAI pipelines, and turning complex data into actionable insight.
+    AI/ML Engineer and Gen AI Engineer turning LLMs and machine learning models into working applications, from raw data to deployed product.
   </p>
   <div class="hero-achievement">
     <svg viewBox="0 0 24 24"><path d="M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3a2 2 0 0 1-2 4M7 5H4a2 2 0 0 0 2 4"/></svg>
@@ -724,7 +740,8 @@
   </div>
   <div class="hero-actions">
     <a href="#projects" class="btn btn-primary">View my work</a>
-    <a href="https://github.com/Cashlin3" target="_blank" class="btn btn-ghost">GitHub profile ↗</a>
+    <a href="CASHLIN_CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download resume</a>
+    <a href="https://github.com/Cashlin3" target="_blank" rel="noopener" class="btn btn-ghost">GitHub profile ↗</a>
   </div>
   <div class="hero-scroll" aria-hidden="true">
     <div class="scroll-line"></div>
@@ -738,55 +755,50 @@
   <div class="about-grid">
     <div class="about-text">
       <p>
-        I'm <strong>Cashlin</strong>, an <strong>AI/ML Engineer</strong> and <strong>Data Scientist</strong> passionate about building systems that think, learn, and solve real problems. I specialise in designing end-to-end machine learning pipelines, fine-tuning large language models, and deploying production-ready AI applications.
+        I'm <strong>Cashlin</strong>, an <strong>AI/ML Engineer</strong> and <strong>Gen AI Engineer</strong> who takes projects from raw data to a deployed product. I build LLM-based applications, machine learning models, and the pipelines that connect them.
       </p>
       <p>
-        From architecting retrieval-augmented generation systems and multi-agent LLM workflows to training transformer-based classifiers and building data-driven dashboards, I thrive at turning complexity into clean, working solutions.
+        Recent work includes a <strong>RAG document assistant</strong> that answers questions only from uploaded files, and a <strong>review classification system</strong> built with PySpark MLlib on 6.99M Yelp reviews. I focus on clean data pipelines, honest evaluation with real metrics, and apps people can actually use.
       </p>
       <p>
-        Currently open to collaborations, research opportunities, and exciting AI/ML and Data Science projects.
+        <strong>Open to full-time AI/ML Engineer, Gen AI Engineer, and Data Scientist roles</strong>, in India or remote. B.E. Computer Science (AI Specialization), 2026.
       </p>
     </div>
     <div class="skills-block">
       <h3>Programming Languages</h3>
       <div class="skill-tags">
-        <span class="tag">C</span>
         <span class="tag">Python</span>
+        <span class="tag">C</span>
         <span class="tag">SQL</span>
-        <span class="tag">R Programming</span>
-        <span class="tag">Lua</span>
+        <span class="tag">R</span>
       </div>
       <h3 style="margin-top: 1.5rem;">GenAI &amp; LLMs</h3>
       <div class="skill-tags">
-        <span class="tag">LangChain</span>
-        <span class="tag">OpenAI API</span>
-        <span class="tag">Claude API</span>
-        <span class="tag">Gemini API</span>
-        <span class="tag">Hugging Face</span>
-        <span class="tag">RAG Pipelines</span>
-        <span class="tag">ChromaDB</span>
-        <span class="tag">Ollama</span>
+        <span class="tag">LLM APIs</span>
+        <span class="tag">RAG</span>
         <span class="tag">Prompt Engineering</span>
-        <span class="tag">VectorDB</span>
+        <span class="tag">LangChain</span>
+        <span class="tag">ChromaDB</span>
+        <span class="tag">Vector Databases</span>
       </div>
-      <h3 style="margin-top: 1.5rem;">DS/ML Frameworks</h3>
+      <h3 style="margin-top: 1.5rem;">AI &amp; Data</h3>
       <div class="skill-tags">
-        <span class="tag">Pandas</span>
-        <span class="tag">Numpy</span>
-        <span class="tag">PySpark</span>
         <span class="tag">PyTorch</span>
         <span class="tag">TensorFlow</span>
         <span class="tag">Scikit-learn</span>
+        <span class="tag">PySpark</span>
         <span class="tag">NLTK</span>
-        <span class="tag">SpaCy</span>
         <span class="tag">OpenCV</span>
-        <span class="tag">Streamlit</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
       </div>
-      <h3 style="margin-top: 1.5rem;">Tools &amp; Platforms</h3>
+      <h3 style="margin-top: 1.5rem;">Tools</h3>
       <div class="skill-tags">
+        <span class="tag">Git</span>
         <span class="tag">GitHub</span>
-        <span class="tag">HuggingFace</span>
-        <span class="tag">VS Code</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Streamlit</span>
+        <span class="tag">Hugging Face</span>
         <span class="tag">MS Excel</span>
       </div>
     </div>
@@ -806,7 +818,7 @@
       <p class="achievement-tag">Hackathon Win</p>
       <h3>1st Place — Productivity Booster Track, ML Empowerment Build Challenge</h3>
       <p>
-        Won for <strong>LocalPulse AI</strong>, an automated local-business review classification system that reached <strong>86% accuracy</strong> across 700,000+ Yelp records using PySpark and Scikit-learn.
+        Won for <strong>LocalPulse AI</strong>, a review classification system trained on <strong>6.99M Yelp reviews</strong> that reached <strong>86.2% accuracy</strong> on a 1.4M-review held-out test set.
       </p>
     </div>
   </div>
@@ -814,70 +826,69 @@
 
 <div class="divider"></div>
 
+<section id="experience">
+  <p class="section-label">// 03 — Experience</p>
+  <h2 class="section-title">Where I've worked</h2>
+  <div class="exp-card">
+    <h3>Technical Research Officer</h3>
+    <p class="exp-meta">Quantelle Private Limited · Chennai, India · July 2024 – January 2025</p>
+    <ul>
+      <li>Researched quantum computing, post-quantum cryptography, and quantum algorithms, and authored 5+ technical reports on the global quantum industry landscape to support strategic positioning.</li>
+      <li>Organized research data across 3+ tracks in Notion and Excel into a structured, shared format, improving cross-team accessibility for the research division.</li>
+      <li>Mentored a 5-member research team on research and reporting practices.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <div class="projects-full" id="projects">
-  <p class="section-label">// 03 — Projects</p>
+  <p class="section-label">// 04 — Projects</p>
   <h2 class="section-title">Things I've built</h2>
 
   <div class="projects-grid">
 
-    <!-- FEATURED -->
-    <a href="https://github.com/Cashlin3/IntelliRead-Personalized-Book-Discovery-Engine" target="_blank" class="project-card featured">
+    <!-- FEATURED: LocalPulse AI (1st place) -->
+    <div class="project-card featured">
       <div class="project-content">
-        <span class="badge-featured">Featured</span>
+        <span class="badge-award">
+          <svg viewBox="0 0 24 24"><path d="M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3a2 2 0 0 1-2 4M7 5H4a2 2 0 0 0 2 4"/></svg>
+          1st Place Winner
+        </span>
         <span class="project-num">01</span>
-        <h3>IntelliRead — Personalized Book Discovery Engine</h3>
+        <h3>LocalPulse AI — Local Business Review Classification System</h3>
         <p class="project-desc">
-          An AI-powered recommendation engine that learns your reading preferences and suggests books tailored to your taste. Processed 10,000+ Goodreads records to train a collaborative-filtering model, delivering top-5 personalized recommendations in under 2 seconds.
+          Trained a PySpark MLlib Logistic Regression classifier on TF-IDF features using 6.99M Yelp reviews, reaching 86.2% accuracy on a 1.4M-review held-out test set. Added a dual-layer alert system that flags a review as critical only when it has both negative ML sentiment and a high-risk keyword match, flagging 11,134 critical reviews. Includes a Streamlit and Plotly dashboard with overview, business search, and alert pages.
         </p>
         <div class="project-tech">
           <span class="tech-pill">Python</span>
+          <span class="tech-pill">PySpark</span>
           <span class="tech-pill">Scikit-learn</span>
-          <span class="tech-pill">Pandas</span>
+          <span class="tech-pill">NLP</span>
           <span class="tech-pill">Streamlit</span>
         </div>
         <div class="project-links">
-          <span class="project-link">
+          <a href="https://github.com/Cashlin3/LocalPulse-AI-Automated-Local-Business-Review-Classification-System" target="_blank" rel="noopener" class="project-link">
             <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            View on GitHub
-          </span>
+            GitHub
+          </a>
+          <a href="https://localpulse-ai-automated-local-business-review-classification-s.streamlit.app/" target="_blank" rel="noopener" class="project-link">
+            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live Demo
+          </a>
         </div>
       </div>
       <div class="project-preview" aria-hidden="true">
-        Recommendation Engine · Collaborative Filtering
+        Dual-layer alert system<br>86.2% accuracy · 6.99M reviews
       </div>
-    </a>
+    </div>
 
-    <!-- PROJECT 2: LocalPulse AI (award-winning) -->
-    <a href="https://github.com/Cashlin3/LocalPulse-AI-Automated-Local-Business-Review-Classification-System" target="_blank" class="project-card">
-      <span class="badge-award">
-        <svg viewBox="0 0 24 24"><path d="M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3a2 2 0 0 1-2 4M7 5H4a2 2 0 0 0 2 4"/></svg>
-        1st Place Winner
-      </span>
+    <!-- PROJECT 02: DocuMind -->
+    <div class="project-card">
       <span class="project-num">02</span>
-      <h3>LocalPulse AI — Automated Local Business Review Classification System</h3>
-      <p class="project-desc">
-        A scalable ML text-classification pipeline processing 700,000+ Yelp reviews with PySpark and Scikit-learn, reaching 86% classification accuracy. Engineered NLP-based feature extraction to power faster, more reliable review-driven business decisions. Won 1st Place in the Productivity Booster track at the ML Empowerment Build Challenge.
-      </p>
-      <div class="project-tech">
-        <span class="tech-pill">Python</span>
-        <span class="tech-pill">PySpark</span>
-        <span class="tech-pill">Scikit-learn</span>
-        <span class="tech-pill">NLP</span>
-      </div>
-      <div class="project-links">
-        <span class="project-link">
-          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          GitHub
-        </span>
-      </div>
-    </a>
-
-    <!-- PROJECT 3 -->
-    <a href="https://github.com/Cashlin3/DocuMind--RAG-Powered-Knowledge-Assistant" target="_blank" class="project-card">
-      <span class="project-num">03</span>
       <h3>DocuMind — RAG-Powered Knowledge Assistant</h3>
       <p class="project-desc">
-        A Retrieval-Augmented Generation application that lets you chat with your own documents. Built an end-to-end LangChain-orchestrated ingestion pipeline with 500-token semantic chunking, cutting query response time to under 3 seconds. Deployed publicly on Streamlit Cloud.
+        Answers questions from uploaded PDF and TXT files using only retrieved content. Built the pipeline with PyPDF2 extraction, token-based recursive chunking (500 tokens, 50 overlap), and ChromaDB cosine-similarity retrieval of the top 4 chunks. Reduced hallucination with a context-restricted prompt, an explicit fallback when the answer isn't in the document, and low-temperature (0.2) generation.
       </p>
       <div class="project-tech">
         <span class="tech-pill">Python</span>
@@ -887,74 +898,33 @@
         <span class="tech-pill">Streamlit</span>
       </div>
       <div class="project-links">
-        <span class="project-link">
+        <a href="https://github.com/Cashlin3/DocuMind--RAG-Powered-Knowledge-Assistant" target="_blank" rel="noopener" class="project-link">
           <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           GitHub
-        </span>
+        </a>
       </div>
-    </a>
+    </div>
 
-    <!-- PROJECT 4 -->
-    <a href="https://factuality-bert-based-fake-news-classification.streamlit.app/" target="_blank" class="project-card">
+    <!-- PROJECT 03: IntelliRead -->
+    <div class="project-card">
       <span class="project-num">04</span>
-      <h3>Factuality — Fake News Detection System</h3>
+      <h3>IntelliRead — Book Discovery Engine</h3>
       <p class="project-desc">
-        A fine-tuned DistilBERT transformer classification model trained on labelled news data with a custom NLP preprocessing workflow, reaching 92% classification accuracy. Deployed live on Streamlit Cloud as a production-grade fake-news classifier.
+        Collaborative-filtering recommender trained on 10,000+ Goodreads records, returning personalized top-5 book recommendations.
       </p>
       <div class="project-tech">
         <span class="tech-pill">Python</span>
-        <span class="tech-pill">DistilBERT</span>
-        <span class="tech-pill">HuggingFace</span>
+        <span class="tech-pill">Scikit-learn</span>
+        <span class="tech-pill">Pandas</span>
         <span class="tech-pill">Streamlit</span>
       </div>
       <div class="project-links">
-        <span class="project-link">
-          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Live Demo
-        </span>
-      </div>
-    </a>
-
-    <!-- PROJECT 5 -->
-    <a href="https://github.com/Cashlin3/GoalForge-Intelligent-Goal-Recommendation-System" target="_blank" class="project-card">
-      <span class="project-num">05</span>
-      <h3>GoalForge — Intelligent Goal Recommendation System</h3>
-      <p class="project-desc">
-        An AI system that takes your ambitions as input and generates a structured, actionable roadmap to achieve them. Analyses user inputs to suggest relevant goals, milestones, and resources — making personal and professional growth more systematic.
-      </p>
-      <div class="project-tech">
-        <span class="tech-pill">Python</span>
-        <span class="tech-pill">ML</span>
-        <span class="tech-pill">NLP</span>
-      </div>
-      <div class="project-links">
-        <span class="project-link">
+        <a href="https://github.com/Cashlin3/IntelliRead-Personalized-Book-Discovery-Engine" target="_blank" rel="noopener" class="project-link">
           <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           GitHub
-        </span>
+        </a>
       </div>
-    </a>
-
-    <!-- PROJECT 6 -->
-    <a href="https://github.com/Cashlin3/TranscriptIQ-Youtube-Video-Transcript-Extractor" target="_blank" class="project-card">
-      <span class="project-num">06</span>
-      <h3>TranscriptIQ — YouTube Video Transcript Extractor</h3>
-      <p class="project-desc">
-        A smart tool that instantly extracts and formats the full transcript of any YouTube video — just paste the URL. Ideal for researchers, students, and content creators who want to read, search, or repurpose video content without watching hours of footage.
-      </p>
-      <div class="project-tech">
-        <span class="tech-pill">Python</span>
-        <span class="tech-pill">YouTube API</span>
-        <span class="tech-pill">NLP</span>
-        <span class="tech-pill">Automation</span>
-      </div>
-      <div class="project-links">
-        <span class="project-link">
-          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          GitHub
-        </span>
-      </div>
-    </a>
+    </div>
 
   </div>
 </div>
@@ -963,9 +933,9 @@
 
 <div class="contact-section" id="contact">
   <div class="contact-left">
-    <p class="section-label">// 04 — Contact</p>
+    <p class="section-label">// 05 — Contact</p>
     <h2>Let's <em>work<br>together</em></h2>
-    <p>Have an AI idea, a data problem, or just want to collaborate? I'm always open to interesting conversations.</p>
+    <p>I'm open to full-time AI/ML and Gen AI roles in India or remote. Happy to talk about any of these projects or the problem you're trying to solve.</p>
   </div>
   <div class="contact-links">
     <a href="mailto:imcashlin@gmail.com" class="contact-item">
@@ -977,7 +947,7 @@
         <p class="contact-item-value">imcashlin@gmail.com</p>
       </div>
     </a>
-    <a href="https://github.com/Cashlin3" target="_blank" class="contact-item">
+    <a href="https://github.com/Cashlin3" target="_blank" rel="noopener" class="contact-item">
       <div class="contact-icon">
         <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
       </div>
@@ -986,7 +956,16 @@
         <p class="contact-item-value">github.com/Cashlin3</p>
       </div>
     </a>
-    <a href="https://www.linkedin.com/in/cashlin-tech/" target="_blank" class="contact-item">
+    <a href="CASHLIN_CV.pdf" target="_blank" rel="noopener" class="contact-item">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+      </div>
+      <div>
+        <p class="contact-item-label">Resume</p>
+        <p class="contact-item-value">Download CV (PDF)</p>
+      </div>
+    </a>
+    <a href="https://www.linkedin.com/in/cashlin-tech/" target="_blank" rel="noopener" class="contact-item">
       <div class="contact-icon">
         <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       </div>
@@ -1000,7 +979,7 @@
 
 <footer>
   <p>© 2026 Cashlin. Built with HTML, CSS & care.</p>
-  <p><a href="https://github.com/Cashlin3" target="_blank">GitHub ↗</a></p>
+  <p><a href="https://github.com/Cashlin3" target="_blank" rel="noopener">GitHub ↗</a></p>
 </footer>
 
 </body>
